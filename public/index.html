@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <main class="container">
+        <header class="app-header">
+            <div class="header-title">
+                <div class="icon-wrapper">
+                    <i class="ri-stack-fill"></i>
+                </div>
+                <h1>Task Master</h1>
+            </div>
+            <p class="subtitle">Organize your workflow cleanly and beautifully.</p>
+        </header>
+
+        <section class="task-form-container glass-panel">
+            <form id="task-form">
+                <div class="input-group">
+                    <input type="text" id="task-title" placeholder="What needs to be done?" required autocomplete="off">
+                </div>
+                <div class="input-group">
+                    <textarea id="task-desc" placeholder="Add some details about the task..." rows="2" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary" id="submit-btn">
+                    <span>Add Task</span>
+                    <i class="ri-add-line"></i>
+                </button>
+            </form>
+        </section>
+
+        <section class="task-list-container">
+            <div class="list-header">
+                <h2>Your Tasks</h2>
+                <div class="stats">
+                    <span id="total-tasks">0</span> Tasks
+                </div>
+            </div>
+            
+            <div id="tasks-grid" class="tasks-grid">
+                
+                 <div class="loading">Loading tasks...</div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
